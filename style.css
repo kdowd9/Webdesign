@@ -1,111 +1,105 @@
-body {
+* {
   margin: 0;
-  height: 100vh;
-  background-color: #4a2e2a;
-  color: #f5e8da;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1, h2 {
-  text-align: center;
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgb(255, 194, 204);
 }
 
 h1 {
-  font-size: 40px;
-  letter-spacing: 2px;
+  text-align: center;
+  font-size: 9vw;
+  line-height: 1;
+  color: white;
+  text-shadow: 5px 5px 5px rgb(255, 149, 149);
 }
 
-.lyrics h2 {
-  font-size: 30px;
-  opacity: 0.7;
-  transform: translateY(20px);
-  transition: 0.8s;
-}
-
-.lyrics h2:hover {
-  color: #ffb703;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hover-love {
-  color: #f5e8da;
+#headline {
+  width: 80%;
+  margin: 50px auto;
   position: relative;
-  cursor: pointer;
-  display: inline-block;
-  transform: scale(0.5);
-  transition: transform 0.5s;
 }
 
-.hover-love:hover {
-  color: #ff4d4d;
-  transform: scale(1);
-}
-
-.pulse-lungs {
-  display: inline-block;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {transform: scale(1);}
-  50% {transform: scale(0.9);}
-  100% {transform: scale(1);}
-}
-
-.click-giveout {
-  color: #ffb703;
-  cursor: pointer;
-  display: inline-block;
-  transition: transform 0.5s, opacity 0.5s;
-}
-
-.click-giveout:active {
-  transform: scale(0);
-  opacity: 0;
-}
-
-.shake-aint {
-  opacity: 0.7;
-  display: inline-block;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.shake-aint:active {
-  opacity: 1;
-  animation: shake 0.4s;
-}
-
-@keyframes shake {
-  0% {transform: translateX(0);}
-  25% {transform: translateX(-3px);}
-  50% {transform: translateX(3px);}
-  75% {transform: translateX(-3px);}
-  100% {transform: translateX(0);}
+h2 {
+  font-size: 5vw;
+  line-height: 1;
+  color: rgb(255, 149, 149);
+  margin: 100px 0 40px 50px;
+  text-transform: uppercase;
 }
 
 
-.spin-lyin {
-  color: #ff4d4d;
-  display: inline-block;
-  cursor: pointer;
-  transition: 0.4s, transform 1s;
+#hair, #nails, #watch, #shoes, #fabric {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 auto 100px auto;
+  width: 85%;
 }
 
-.spin-lyin:hover {
-  color: #ffffff;
-  transform: rotate(360deg);
+
+.dryer, .acrylic, .swatch, .tabis, .metallic {
+  width: 40%;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-footer {
-  position: absolute;
-  bottom: 20px;
-  font-size: 12px;
-  opacity: 0.6;
+
+.info {
+  width: 50%;
+  color: white;
+  font-size: 1.3vw;
+  line-height: 1.5;
+}
+
+
+.dryer {
+  background-image: url('images/hair.png');
+}
+
+.acrylic {
+  background-image: url('images/nails.png');
+}
+
+.swatch {
+  background-image: url('images/swatch.png');
+}
+
+.tabis {
+  background-image: url('images/tabis.png');
+}
+
+.metallic {
+  background-image: url('images/fabric.png');
+}
+
+
+@media (max-width: 900px) {
+  #hair, #nails, #watch, #shoes, #fabric {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .dryer, .acrylic, .swatch, .tabis, .metallic {
+    width: 80%;
+    height: 300px;
+  }
+
+  .info {
+    width: 85%;
+    font-size: 3.5vw;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 8vw;
+    margin: 50px 0 20px 0;
+    text-align: center;
+  }
 }
